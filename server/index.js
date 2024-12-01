@@ -13,6 +13,11 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  // console.log("Root endpoint accessed at", new Date().toISOString());
+  res.status(200).send("Server is running and logging is active.");
+});
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {

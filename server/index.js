@@ -24,6 +24,7 @@ const io = new Server(server, {
     origin: "*",
     methods: ["GET", "POST"],
   },
+  transports: ["polling"]
 });
 
 io.on("connection", (socket) => {
